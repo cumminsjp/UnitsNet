@@ -38,5 +38,6 @@ namespace UnitsNet.Units
         Millimeter,
         Nanometer,
         Yard,
+        DecimalDegrees
     }
 }
