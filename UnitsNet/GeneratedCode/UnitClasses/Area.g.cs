@@ -50,6 +50,22 @@ namespace UnitsNet
         #region Properties
 
         /// <summary>
+        ///     Get Area in Acres.
+        /// </summary>
+        public double Acres
+        {
+            get { return _squareMeters/4046.86; }
+        }
+
+        /// <summary>
+        ///     Get Area in Hectares.
+        /// </summary>
+        public double Hectares
+        {
+            get { return _squareMeters/1e4; }
+        }
+
+        /// <summary>
         ///     Get Area in SquareCentimeters.
         /// </summary>
         public double SquareCentimeters
@@ -128,6 +144,22 @@ namespace UnitsNet
         public static Area Zero
         {
             get { return new Area(); }
+        }
+
+        /// <summary>
+        ///     Get Area from Acres.
+        /// </summary>
+        public static Area FromAcres(double acres)
+        {
+            return new Area(acres*4046.86);
+        }
+
+        /// <summary>
+        ///     Get Area from Hectares.
+        /// </summary>
+        public static Area FromHectares(double hectares)
+        {
+            return new Area(hectares*1e4);
         }
 
         /// <summary>
@@ -213,6 +245,10 @@ namespace UnitsNet
         {
             switch (fromUnit)
             {
+                case AreaUnit.Acre:
+                    return FromAcres(value);
+                case AreaUnit.Hectare:
+                    return FromHectares(value);
                 case AreaUnit.SquareCentimeter:
                     return FromSquareCentimeters(value);
                 case AreaUnit.SquareDecimeter:
@@ -364,6 +400,10 @@ namespace UnitsNet
         {
             switch (unit)
             {
+                case AreaUnit.Acre:
+                    return Acres;
+                case AreaUnit.Hectare:
+                    return Hectares;
                 case AreaUnit.SquareCentimeter:
                     return SquareCentimeters;
                 case AreaUnit.SquareDecimeter:

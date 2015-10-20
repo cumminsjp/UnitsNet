@@ -58,6 +58,14 @@ namespace UnitsNet
         }
 
         /// <summary>
+        ///     Get Length in DecimalDegrees.
+        /// </summary>
+        public double DecimalDegrees
+        {
+            get { return _meters/111194.92664455873; }
+        }
+
+        /// <summary>
         ///     Get Length in Decimeters.
         /// </summary>
         public double Decimeters
@@ -171,6 +179,14 @@ namespace UnitsNet
         }
 
         /// <summary>
+        ///     Get Length from DecimalDegrees.
+        /// </summary>
+        public static Length FromDecimalDegrees(double decimaldegrees)
+        {
+            return new Length(decimaldegrees*111194.92664455873);
+        }
+
+        /// <summary>
         ///     Get Length from Decimeters.
         /// </summary>
         public static Length FromDecimeters(double decimeters)
@@ -279,6 +295,8 @@ namespace UnitsNet
             {
                 case LengthUnit.Centimeter:
                     return FromCentimeters(value);
+                case LengthUnit.DecimalDegree:
+                    return FromDecimalDegrees(value);
                 case LengthUnit.Decimeter:
                     return FromDecimeters(value);
                 case LengthUnit.Foot:
@@ -438,6 +456,8 @@ namespace UnitsNet
             {
                 case LengthUnit.Centimeter:
                     return Centimeters;
+                case LengthUnit.DecimalDegree:
+                    return DecimalDegrees;
                 case LengthUnit.Decimeter:
                     return Decimeters;
                 case LengthUnit.Foot:

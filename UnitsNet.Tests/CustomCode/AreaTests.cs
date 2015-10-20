@@ -23,6 +23,16 @@ namespace UnitsNet.Tests.CustomCode
 {
     public class AreaTests : AreaTestsBase
     {
+        protected override double AcresInOneSquareMeter
+        {
+            get { return 0.000247105d; }
+        }
+
+        protected override double HectaresInOneSquareMeter
+        {
+            get { return 0.0001d; }
+        }
+
         protected override double SquareCentimetersInOneSquareMeter
         {
             get { return 1E4; }

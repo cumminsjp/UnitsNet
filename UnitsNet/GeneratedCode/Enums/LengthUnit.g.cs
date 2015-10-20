@@ -26,6 +26,7 @@ namespace UnitsNet.Units
     {
         Undefined = 0,
         Centimeter,
+        DecimalDegree,
         Decimeter,
         Foot,
         Inch,
@@ -38,6 +39,5 @@ namespace UnitsNet.Units
         Millimeter,
         Nanometer,
         Yard,
-        DecimalDegrees
     }
 }

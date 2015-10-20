@@ -28,6 +28,17 @@ namespace UnitsNet.Tests.CustomCode
             get { return 100; }
         }
 
+        /// <summary>
+        /// Gets the decimal degree length (1 longitude degree at the equator calculated via Haversine) in one meter
+        /// </summary>
+        /// <value>
+        /// The decimal degrees in one meter.
+        /// </value>
+        protected override double DecimalDegreesInOneMeter
+        {
+            get { return 0.00000899321d; }
+        }
+
         protected override double DecimetersInOneMeter
         {
             get { return 10; }

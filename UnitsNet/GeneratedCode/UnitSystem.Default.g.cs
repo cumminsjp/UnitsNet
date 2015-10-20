@@ -87,6 +87,18 @@ namespace UnitsNet
                 new UnitLocalization(typeof (AreaUnit),
                     new[]
                     {
+                        new CulturesForEnumValue((int) AreaUnit.Acre,
+                            new[]
+                            {
+                                new AbbreviationsForCulture("en-US", "ac"),
+                                new AbbreviationsForCulture("ru-RU", "ac"),
+                            }),
+                        new CulturesForEnumValue((int) AreaUnit.Hectare,
+                            new[]
+                            {
+                                new AbbreviationsForCulture("en-US", "ha"),
+                                new AbbreviationsForCulture("ru-RU", "ha"),
+                            }),
                         new CulturesForEnumValue((int) AreaUnit.SquareCentimeter,
                             new[]
                             {
@@ -718,6 +730,12 @@ namespace UnitsNet
                             {
                                 new AbbreviationsForCulture("en-US", "cm"),
                                 new AbbreviationsForCulture("ru-RU", "см"),
+                            }),
+                        new CulturesForEnumValue((int) LengthUnit.DecimalDegree,
+                            new[]
+                            {
+                                new AbbreviationsForCulture("en-US", "DD"),
+                                new AbbreviationsForCulture("ru-RU", "DD"),
                             }),
                         new CulturesForEnumValue((int) LengthUnit.Decimeter,
                             new[]
