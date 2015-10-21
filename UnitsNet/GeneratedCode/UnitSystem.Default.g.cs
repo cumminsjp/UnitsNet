@@ -154,6 +154,25 @@ namespace UnitsNet
                                 new AbbreviationsForCulture("ru-RU", "ярд²"),
                             }),
                     }),
+                new UnitLocalization(typeof (AreaDensityUnit),
+                    new[]
+                    {
+                        new CulturesForEnumValue((int) AreaDensityUnit.KilogramPerHectare,
+                            new[]
+                            {
+                                new AbbreviationsForCulture("en-US", "kg/ha"),
+                            }),
+                        new CulturesForEnumValue((int) AreaDensityUnit.KilogramPerSquareMeter,
+                            new[]
+                            {
+                                new AbbreviationsForCulture("en-US", "kg/m²"),
+                            }),
+                        new CulturesForEnumValue((int) AreaDensityUnit.PoundPerAcre,
+                            new[]
+                            {
+                                new AbbreviationsForCulture("en-US", "lb/ac"),
+                            }),
+                    }),
                 new UnitLocalization(typeof (DensityUnit),
                     new[]
                     {
