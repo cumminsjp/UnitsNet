@@ -21,12 +21,13 @@ namespace UnitsNet
         /// </summary>
         public FeetInches FeetInches
         {
-            get {
+            get
+            {
                 double totalInches = Inches;
                 double wholeFeet = Math.Floor(totalInches / FeetToInches);
                 double inches = totalInches % FeetToInches;
 
-                return new FeetInches(wholeFeet, inches); 
+                return new FeetInches(wholeFeet, inches);
             }
         }
 
@@ -36,6 +37,59 @@ namespace UnitsNet
         public static Length FromFeetInches(double feet, double inches)
         {
             return FromInches((FeetToInches * feet) + inches);
+        }
+
+        /// <summary>
+        /// Gets length from 2 lat/long coordinates
+        /// </summary>
+        /// <param name="latitude1">The latitude1.</param>
+        /// <param name="longitude1">The longitude1.</param>
+        /// <param name="latitude2">The latitude2.</param>
+        /// <param name="longitude2">The longitude2.</param>
+        /// <returns></returns>
+        public static Length FromLatitudeLongitude(double latitude1, double longitude1, double latitude2, double longitude2)
+        {
+            var distance = HaversineDistance(latitude1, longitude1, latitude2, longitude2);
+
+            return FromMeters(distance);
+        }
+
+        /// <summary>
+        /// Returns the distance in meters of any two latitude / longitude points
+        /// </summary>
+        /// <param name="latitude1">The latitude1 (y)</param>
+        /// <param name="longitude1">The longitude1 (x)</param>
+        /// <param name="latitude2">The latitude2 (y)</param>
+        /// <param name="longitude2">The longitude2 (x)</param>
+        /// <returns>
+        /// Distance in meters
+        /// </returns>
+        private static double HaversineDistance(double latitude1, double longitude1, double latitude2, double longitude2)
+        {
+            // ReSharper disable once InconsistentNaming
+            const double EARTH_RADIUS_KM = 6371;
+
+            var lat = ToRadians((latitude2 - latitude1));
+            var lng = ToRadians((longitude2 - longitude1));
+
+            var h1 = Math.Sin(lat / 2) * Math.Sin(lat / 2) +
+                     Math.Cos(ToRadians(latitude1)) * Math.Cos(ToRadians(latitude2)) *
+                     Math.Sin(lng / 2) * Math.Sin(lng / 2);
+
+            var h2 = 2 * Math.Asin(Math.Min(1, Math.Sqrt(h1)));
+
+            return (EARTH_RADIUS_KM * h2) * 1000;
+        }
+
+
+        /// <summary>
+        /// Convert to Radians 
+        /// </summary>
+        /// <param name="angle">The angle.</param>
+        /// <returns></returns>
+        private static double ToRadians(double angle)
+        {
+            return Math.PI * angle / 180.0;
         }
     }
 
