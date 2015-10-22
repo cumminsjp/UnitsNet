@@ -49,6 +49,11 @@ namespace UnitsNet
 
         #region Properties
 
+        public static AreaDensityUnit BaseUnit
+        {
+            get { return AreaDensityUnit.KilogramPerSquareMeter; }
+        }
+
         /// <summary>
         ///     Get AreaDensity in KilgramsPerHectare.
         /// </summary>

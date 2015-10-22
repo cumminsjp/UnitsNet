@@ -37,6 +37,7 @@ namespace UnitsNet.Tests
     public abstract partial class LengthTestsBase
     {
         protected abstract double CentimetersInOneMeter { get; }
+        protected abstract double DecimalDegreesInOneMeter { get; }
         protected abstract double DecimetersInOneMeter { get; }
         protected abstract double FeetInOneMeter { get; }
         protected abstract double InchesInOneMeter { get; }
@@ -52,6 +53,7 @@ namespace UnitsNet.Tests
 
 // ReSharper disable VirtualMemberNeverOverriden.Global
         protected virtual double CentimetersTolerance { get { return 1e-5; } }
+        protected virtual double DecimalDegreesTolerance { get { return 1e-5; } }
         protected virtual double DecimetersTolerance { get { return 1e-5; } }
         protected virtual double FeetTolerance { get { return 1e-5; } }
         protected virtual double InchesTolerance { get { return 1e-5; } }
@@ -71,6 +73,7 @@ namespace UnitsNet.Tests
         {
             Length meter = Length.FromMeters(1);
             Assert.AreEqual(CentimetersInOneMeter, meter.Centimeters, CentimetersTolerance);
+            Assert.AreEqual(DecimalDegreesInOneMeter, meter.DecimalDegrees, DecimalDegreesTolerance);
             Assert.AreEqual(DecimetersInOneMeter, meter.Decimeters, DecimetersTolerance);
             Assert.AreEqual(FeetInOneMeter, meter.Feet, FeetTolerance);
             Assert.AreEqual(InchesInOneMeter, meter.Inches, InchesTolerance);
@@ -89,6 +92,7 @@ namespace UnitsNet.Tests
         public void FromValueAndUnit()
         {
             Assert.AreEqual(1, Length.From(1, LengthUnit.Centimeter).Centimeters, CentimetersTolerance);
+            Assert.AreEqual(1, Length.From(1, LengthUnit.DecimalDegree).DecimalDegrees, DecimalDegreesTolerance);
             Assert.AreEqual(1, Length.From(1, LengthUnit.Decimeter).Decimeters, DecimetersTolerance);
             Assert.AreEqual(1, Length.From(1, LengthUnit.Foot).Feet, FeetTolerance);
             Assert.AreEqual(1, Length.From(1, LengthUnit.Inch).Inches, InchesTolerance);
@@ -108,6 +112,7 @@ namespace UnitsNet.Tests
         {
             var meter = Length.FromMeters(1);
             Assert.AreEqual(CentimetersInOneMeter, meter.As(LengthUnit.Centimeter), CentimetersTolerance);
+            Assert.AreEqual(DecimalDegreesInOneMeter, meter.As(LengthUnit.DecimalDegree), DecimalDegreesTolerance);
             Assert.AreEqual(DecimetersInOneMeter, meter.As(LengthUnit.Decimeter), DecimetersTolerance);
             Assert.AreEqual(FeetInOneMeter, meter.As(LengthUnit.Foot), FeetTolerance);
             Assert.AreEqual(InchesInOneMeter, meter.As(LengthUnit.Inch), InchesTolerance);
@@ -127,6 +132,7 @@ namespace UnitsNet.Tests
         {
             Length meter = Length.FromMeters(1);
             Assert.AreEqual(1, Length.FromCentimeters(meter.Centimeters).Meters, CentimetersTolerance);
+            Assert.AreEqual(1, Length.FromDecimalDegrees(meter.DecimalDegrees).Meters, DecimalDegreesTolerance);
             Assert.AreEqual(1, Length.FromDecimeters(meter.Decimeters).Meters, DecimetersTolerance);
             Assert.AreEqual(1, Length.FromFeet(meter.Feet).Meters, FeetTolerance);
             Assert.AreEqual(1, Length.FromInches(meter.Inches).Meters, InchesTolerance);

@@ -116,6 +116,22 @@
                     "Abbreviations": ["микродюйм"]
                 }
             ]
-        }
+        },
+        {
+            "SingularName": "DecimalDegree",
+            "PluralName": "DecimalDegrees",
+            "FromUnitToBaseFunc": "x*111194.92664455873",
+            "FromBaseToUnitFunc": "x/111194.92664455873",
+            "Localization": [
+                {
+                    "Culture": "en-US",
+                    "Abbreviations": ["DD"]
+                },
+                {
+                    "Culture": "ru-RU",
+                    "Abbreviations": ["DD"]
+                }
+            ]
+        }		
     ]
 }

@@ -790,6 +790,12 @@ namespace UnitsNet
                                 new AbbreviationsForCulture("en-US", "cm"),
                                 new AbbreviationsForCulture("ru-RU", "см"),
                             }),
+                        new CulturesForEnumValue((int) LengthUnit.DecimalDegree,
+                            new[]
+                            {
+                                new AbbreviationsForCulture("en-US", "DD"),
+                                new AbbreviationsForCulture("ru-RU", "DD"),
+                            }),
                         new CulturesForEnumValue((int) LengthUnit.Decimeter,
                             new[]
                             {
