@@ -56,6 +56,12 @@ namespace UnitsNet.Units
         CubicYard,
         Deciliter,
         Hectoliter,
+
+        /// <summary>
+        ///     The imperial bushel is a unit of volume used to measure dry, bulk commodities in the United Kingdom. The imperial bushel established by the Weights and Measures Act of 1824 described the bushel as the volume of 80 avoirdupois pounds of distilled water in air at 62 °F (17 °C) or 8 imperial gallons.
+        /// </summary>
+        /// <remarks>https://en.wikipedia.org/wiki/Bushel</remarks>
+        ImperialBushel,
         ImperialGallon,
         ImperialOunce,
         Liter,
@@ -69,6 +75,12 @@ namespace UnitsNet.Units
         [System.Obsolete("Deprecated due to github issue #134, please use UsTeaspoon instead")]
         Teaspoon,
         UkTablespoon,
+
+        /// <summary>
+        ///     The US bushel is a unit of volume used to measure dry, bulk commodities.
+        /// </summary>
+        /// <remarks>https://en.wikipedia.org/wiki/Bushel</remarks>
+        UsBushel,
         UsCustomaryCup,
         UsGallon,
         UsLegalCup,

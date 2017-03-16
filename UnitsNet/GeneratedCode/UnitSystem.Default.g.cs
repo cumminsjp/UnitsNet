@@ -2485,6 +2485,11 @@ namespace UnitsNet
                                 new AbbreviationsForCulture("en-US", "hl"),
                                 new AbbreviationsForCulture("ru-RU", "гл"),
                             }),
+                        new CulturesForEnumValue((int) VolumeUnit.ImperialBushel,
+                            new[]
+                            {
+                                new AbbreviationsForCulture("en-US", "bu"),
+                            }),
                         new CulturesForEnumValue((int) VolumeUnit.ImperialGallon,
                             new[]
                             {
@@ -2552,6 +2557,11 @@ namespace UnitsNet
                                 new AbbreviationsForCulture("en-US", ""),
                                 new AbbreviationsForCulture("ru-RU", ""),
                                 new AbbreviationsForCulture("nb-NO", ""),
+                            }),
+                        new CulturesForEnumValue((int) VolumeUnit.UsBushel,
+                            new[]
+                            {
+                                new AbbreviationsForCulture("en-US", "bu"),
                             }),
                         new CulturesForEnumValue((int) VolumeUnit.UsCustomaryCup,
                             new[]

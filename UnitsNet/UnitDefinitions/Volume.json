@@ -434,6 +434,34 @@
           "Abbreviations": [ "bbl" ]
         }
       ]
+    },
+    {
+      "SingularName": "UsBushel",
+      "PluralName": "UsBushels",
+      "FromUnitToBaseFunc": "x*0.035239070399966536",
+      "FromBaseToUnitFunc": "x/0.035239070399966536",
+      "XmlDocSummary": "The US bushel is a unit of volume used to measure dry, bulk commodities.",
+      "XmlDocRemarks": "https://en.wikipedia.org/wiki/Bushel",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "bu" ]
+        }
+      ]
+    },
+    {
+      "SingularName": "ImperialBushel",
+      "PluralName": "ImperialBushels",
+      "FromUnitToBaseFunc": "x*0.036368722255958",
+      "FromBaseToUnitFunc": "x/0.036368722255958",
+      "XmlDocSummary": "The imperial bushel is a unit of volume used to measure dry, bulk commodities in the United Kingdom. The imperial bushel established by the Weights and Measures Act of 1824 described the bushel as the volume of 80 avoirdupois pounds of distilled water in air at 62 °F (17 °C) or 8 imperial gallons.",
+      "XmlDocRemarks": "https://en.wikipedia.org/wiki/Bushel",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "bu" ]
+        }
+      ]
     }
   ]
 }

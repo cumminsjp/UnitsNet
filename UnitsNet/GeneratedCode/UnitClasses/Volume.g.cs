@@ -223,6 +223,14 @@ namespace UnitsNet
         }
 
         /// <summary>
+        ///     Get Volume in ImperialBushels.
+        /// </summary>
+        public double ImperialBushels
+        {
+            get { return _cubicMeters/0.036368722255958; }
+        }
+
+        /// <summary>
         ///     Get Volume in ImperialGallons.
         /// </summary>
         public double ImperialGallons
@@ -310,6 +318,14 @@ namespace UnitsNet
         public double UkTablespoons
         {
             get { return _cubicMeters/1.5e-5; }
+        }
+
+        /// <summary>
+        ///     Get Volume in UsBushels.
+        /// </summary>
+        public double UsBushels
+        {
+            get { return _cubicMeters/0.035239070399966536; }
         }
 
         /// <summary>
@@ -482,6 +498,14 @@ namespace UnitsNet
         }
 
         /// <summary>
+        ///     Get Volume from ImperialBushels.
+        /// </summary>
+        public static Volume FromImperialBushels(double imperialbushels)
+        {
+            return new Volume(imperialbushels*0.036368722255958);
+        }
+
+        /// <summary>
         ///     Get Volume from ImperialGallons.
         /// </summary>
         public static Volume FromImperialGallons(double imperialgallons)
@@ -567,6 +591,14 @@ namespace UnitsNet
         public static Volume FromUkTablespoons(double uktablespoons)
         {
             return new Volume(uktablespoons*1.5e-5);
+        }
+
+        /// <summary>
+        ///     Get Volume from UsBushels.
+        /// </summary>
+        public static Volume FromUsBushels(double usbushels)
+        {
+            return new Volume(usbushels*0.035239070399966536);
         }
 
         /// <summary>
@@ -829,6 +861,21 @@ namespace UnitsNet
         }
 
         /// <summary>
+        ///     Get nullable Volume from nullable ImperialBushels.
+        /// </summary>
+        public static Volume? FromImperialBushels(double? imperialbushels)
+        {
+            if (imperialbushels.HasValue)
+            {
+                return FromImperialBushels(imperialbushels.Value);
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
         ///     Get nullable Volume from nullable ImperialGallons.
         /// </summary>
         public static Volume? FromImperialGallons(double? imperialgallons)
@@ -994,6 +1041,21 @@ namespace UnitsNet
         }
 
         /// <summary>
+        ///     Get nullable Volume from nullable UsBushels.
+        /// </summary>
+        public static Volume? FromUsBushels(double? usbushels)
+        {
+            if (usbushels.HasValue)
+            {
+                return FromUsBushels(usbushels.Value);
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
         ///     Get nullable Volume from nullable UsCustomaryCups.
         /// </summary>
         public static Volume? FromUsCustomaryCups(double? uscustomarycups)
@@ -1123,6 +1185,8 @@ namespace UnitsNet
                     return FromDeciliters(val);
                 case VolumeUnit.Hectoliter:
                     return FromHectoliters(val);
+                case VolumeUnit.ImperialBushel:
+                    return FromImperialBushels(val);
                 case VolumeUnit.ImperialGallon:
                     return FromImperialGallons(val);
                 case VolumeUnit.ImperialOunce:
@@ -1145,6 +1209,8 @@ namespace UnitsNet
                     return FromTeaspoons(val);
                 case VolumeUnit.UkTablespoon:
                     return FromUkTablespoons(val);
+                case VolumeUnit.UsBushel:
+                    return FromUsBushels(val);
                 case VolumeUnit.UsCustomaryCup:
                     return FromUsCustomaryCups(val);
                 case VolumeUnit.UsGallon:
@@ -1206,6 +1272,8 @@ namespace UnitsNet
                     return FromDeciliters(value.Value);
                 case VolumeUnit.Hectoliter:
                     return FromHectoliters(value.Value);
+                case VolumeUnit.ImperialBushel:
+                    return FromImperialBushels(value.Value);
                 case VolumeUnit.ImperialGallon:
                     return FromImperialGallons(value.Value);
                 case VolumeUnit.ImperialOunce:
@@ -1228,6 +1296,8 @@ namespace UnitsNet
                     return FromTeaspoons(value.Value);
                 case VolumeUnit.UkTablespoon:
                     return FromUkTablespoons(value.Value);
+                case VolumeUnit.UsBushel:
+                    return FromUsBushels(value.Value);
                 case VolumeUnit.UsCustomaryCup:
                     return FromUsCustomaryCups(value.Value);
                 case VolumeUnit.UsGallon:
@@ -1422,6 +1492,8 @@ namespace UnitsNet
                     return Deciliters;
                 case VolumeUnit.Hectoliter:
                     return Hectoliters;
+                case VolumeUnit.ImperialBushel:
+                    return ImperialBushels;
                 case VolumeUnit.ImperialGallon:
                     return ImperialGallons;
                 case VolumeUnit.ImperialOunce:
@@ -1444,6 +1516,8 @@ namespace UnitsNet
                     return Teaspoons;
                 case VolumeUnit.UkTablespoon:
                     return UkTablespoons;
+                case VolumeUnit.UsBushel:
+                    return UsBushels;
                 case VolumeUnit.UsCustomaryCup:
                     return UsCustomaryCups;
                 case VolumeUnit.UsGallon:

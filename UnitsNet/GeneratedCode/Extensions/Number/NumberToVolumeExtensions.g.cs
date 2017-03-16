@@ -520,6 +520,40 @@ namespace UnitsNet.Extensions.NumberToVolume
 
         #endregion
 
+        #region ImperialBushel
+
+        /// <inheritdoc cref="Volume.FromImperialBushels(double)"/>
+        public static Volume ImperialBushels(this int value) => Volume.FromImperialBushels(value);
+
+        /// <inheritdoc cref="Volume.FromImperialBushels(double?)"/>
+        public static Volume? ImperialBushels(this int? value) => Volume.FromImperialBushels(value);
+
+        /// <inheritdoc cref="Volume.FromImperialBushels(double)"/>
+        public static Volume ImperialBushels(this long value) => Volume.FromImperialBushels(value);
+
+        /// <inheritdoc cref="Volume.FromImperialBushels(double?)"/>
+        public static Volume? ImperialBushels(this long? value) => Volume.FromImperialBushels(value);
+
+        /// <inheritdoc cref="Volume.FromImperialBushels(double)"/>
+        public static Volume ImperialBushels(this double value) => Volume.FromImperialBushels(value);
+
+        /// <inheritdoc cref="Volume.FromImperialBushels(double?)"/>
+        public static Volume? ImperialBushels(this double? value) => Volume.FromImperialBushels(value);
+
+        /// <inheritdoc cref="Volume.FromImperialBushels(double)"/>
+        public static Volume ImperialBushels(this float value) => Volume.FromImperialBushels(value);
+
+        /// <inheritdoc cref="Volume.FromImperialBushels(double?)"/>
+        public static Volume? ImperialBushels(this float? value) => Volume.FromImperialBushels(value);
+
+        /// <inheritdoc cref="Volume.FromImperialBushels(double)"/>
+        public static Volume ImperialBushels(this decimal value) => Volume.FromImperialBushels(Convert.ToDouble(value));
+
+        /// <inheritdoc cref="Volume.FromImperialBushels(double?)"/>
+        public static Volume? ImperialBushels(this decimal? value) => Volume.FromImperialBushels(value == null ? (double?)null : Convert.ToDouble(value.Value));
+
+        #endregion
+
         #region ImperialGallon
 
         /// <inheritdoc cref="Volume.FromImperialGallons(double)"/>
@@ -891,6 +925,40 @@ namespace UnitsNet.Extensions.NumberToVolume
 
         /// <inheritdoc cref="Volume.FromUkTablespoons(double?)"/>
         public static Volume? UkTablespoons(this decimal? value) => Volume.FromUkTablespoons(value == null ? (double?)null : Convert.ToDouble(value.Value));
+
+        #endregion
+
+        #region UsBushel
+
+        /// <inheritdoc cref="Volume.FromUsBushels(double)"/>
+        public static Volume UsBushels(this int value) => Volume.FromUsBushels(value);
+
+        /// <inheritdoc cref="Volume.FromUsBushels(double?)"/>
+        public static Volume? UsBushels(this int? value) => Volume.FromUsBushels(value);
+
+        /// <inheritdoc cref="Volume.FromUsBushels(double)"/>
+        public static Volume UsBushels(this long value) => Volume.FromUsBushels(value);
+
+        /// <inheritdoc cref="Volume.FromUsBushels(double?)"/>
+        public static Volume? UsBushels(this long? value) => Volume.FromUsBushels(value);
+
+        /// <inheritdoc cref="Volume.FromUsBushels(double)"/>
+        public static Volume UsBushels(this double value) => Volume.FromUsBushels(value);
+
+        /// <inheritdoc cref="Volume.FromUsBushels(double?)"/>
+        public static Volume? UsBushels(this double? value) => Volume.FromUsBushels(value);
+
+        /// <inheritdoc cref="Volume.FromUsBushels(double)"/>
+        public static Volume UsBushels(this float value) => Volume.FromUsBushels(value);
+
+        /// <inheritdoc cref="Volume.FromUsBushels(double?)"/>
+        public static Volume? UsBushels(this float? value) => Volume.FromUsBushels(value);
+
+        /// <inheritdoc cref="Volume.FromUsBushels(double)"/>
+        public static Volume UsBushels(this decimal value) => Volume.FromUsBushels(Convert.ToDouble(value));
+
+        /// <inheritdoc cref="Volume.FromUsBushels(double?)"/>
+        public static Volume? UsBushels(this decimal? value) => Volume.FromUsBushels(value == null ? (double?)null : Convert.ToDouble(value.Value));
 
         #endregion
 
