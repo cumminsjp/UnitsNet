@@ -214,6 +214,40 @@ namespace UnitsNet.Extensions.NumberToSpeed
 
         #endregion
 
+        #region InchPerYear
+
+        /// <inheritdoc cref="Speed.FromInchesPerYear(double)"/>
+        public static Speed InchesPerYear(this int value) => Speed.FromInchesPerYear(value);
+
+        /// <inheritdoc cref="Speed.FromInchesPerYear(double?)"/>
+        public static Speed? InchesPerYear(this int? value) => Speed.FromInchesPerYear(value);
+
+        /// <inheritdoc cref="Speed.FromInchesPerYear(double)"/>
+        public static Speed InchesPerYear(this long value) => Speed.FromInchesPerYear(value);
+
+        /// <inheritdoc cref="Speed.FromInchesPerYear(double?)"/>
+        public static Speed? InchesPerYear(this long? value) => Speed.FromInchesPerYear(value);
+
+        /// <inheritdoc cref="Speed.FromInchesPerYear(double)"/>
+        public static Speed InchesPerYear(this double value) => Speed.FromInchesPerYear(value);
+
+        /// <inheritdoc cref="Speed.FromInchesPerYear(double?)"/>
+        public static Speed? InchesPerYear(this double? value) => Speed.FromInchesPerYear(value);
+
+        /// <inheritdoc cref="Speed.FromInchesPerYear(double)"/>
+        public static Speed InchesPerYear(this float value) => Speed.FromInchesPerYear(value);
+
+        /// <inheritdoc cref="Speed.FromInchesPerYear(double?)"/>
+        public static Speed? InchesPerYear(this float? value) => Speed.FromInchesPerYear(value);
+
+        /// <inheritdoc cref="Speed.FromInchesPerYear(double)"/>
+        public static Speed InchesPerYear(this decimal value) => Speed.FromInchesPerYear(Convert.ToDouble(value));
+
+        /// <inheritdoc cref="Speed.FromInchesPerYear(double?)"/>
+        public static Speed? InchesPerYear(this decimal? value) => Speed.FromInchesPerYear(value == null ? (double?)null : Convert.ToDouble(value.Value));
+
+        #endregion
+
         #region KilometerPerHour
 
         /// <inheritdoc cref="Speed.FromKilometersPerHour(double)"/>

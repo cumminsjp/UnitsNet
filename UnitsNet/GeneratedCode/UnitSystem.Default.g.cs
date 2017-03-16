@@ -2094,6 +2094,11 @@ namespace UnitsNet
                             {
                                 new AbbreviationsForCulture("en-US", "ft/s"),
                             }),
+                        new CulturesForEnumValue((int) SpeedUnit.InchPerYear,
+                            new[]
+                            {
+                                new AbbreviationsForCulture("en-US", "in/yr"),
+                            }),
                         new CulturesForEnumValue((int) SpeedUnit.KilometerPerHour,
                             new[]
                             {

@@ -54,6 +54,18 @@
       ]
     },
     {
+      "SingularName": "InchPerYear",
+      "PluralName": "InchesPerYear",
+      "FromUnitToBaseFunc": "x*8.0489395807301034E-10",
+      "FromBaseToUnitFunc": "x/8.0489395807301034E-10",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "in/yr" ]
+        }
+      ]
+    },
+    {
       "SingularName": "KilometerPerHour",
       "PluralName": "KilometersPerHour",
       "FromUnitToBaseFunc": "x/3.6",

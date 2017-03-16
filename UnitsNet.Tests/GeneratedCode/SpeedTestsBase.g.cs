@@ -58,6 +58,7 @@ namespace UnitsNet.Tests
         protected abstract double DecimetersPerMinutesInOneMeterPerSecond { get; }
         protected abstract double DecimetersPerSecondInOneMeterPerSecond { get; }
         protected abstract double FeetPerSecondInOneMeterPerSecond { get; }
+        protected abstract double InchesPerYearInOneMeterPerSecond { get; }
         protected abstract double KilometersPerHourInOneMeterPerSecond { get; }
         protected abstract double KilometersPerMinutesInOneMeterPerSecond { get; }
         protected abstract double KilometersPerSecondInOneMeterPerSecond { get; }
@@ -79,6 +80,7 @@ namespace UnitsNet.Tests
         protected virtual double DecimetersPerMinutesTolerance { get { return 1e-5; } }
         protected virtual double DecimetersPerSecondTolerance { get { return 1e-5; } }
         protected virtual double FeetPerSecondTolerance { get { return 1e-5; } }
+        protected virtual double InchesPerYearTolerance { get { return 1e-5; } }
         protected virtual double KilometersPerHourTolerance { get { return 1e-5; } }
         protected virtual double KilometersPerMinutesTolerance { get { return 1e-5; } }
         protected virtual double KilometersPerSecondTolerance { get { return 1e-5; } }
@@ -104,6 +106,7 @@ namespace UnitsNet.Tests
             Assert.AreEqual(DecimetersPerMinutesInOneMeterPerSecond, meterpersecond.DecimetersPerMinutes, DecimetersPerMinutesTolerance);
             Assert.AreEqual(DecimetersPerSecondInOneMeterPerSecond, meterpersecond.DecimetersPerSecond, DecimetersPerSecondTolerance);
             Assert.AreEqual(FeetPerSecondInOneMeterPerSecond, meterpersecond.FeetPerSecond, FeetPerSecondTolerance);
+            Assert.AreEqual(InchesPerYearInOneMeterPerSecond, meterpersecond.InchesPerYear, InchesPerYearTolerance);
             Assert.AreEqual(KilometersPerHourInOneMeterPerSecond, meterpersecond.KilometersPerHour, KilometersPerHourTolerance);
             Assert.AreEqual(KilometersPerMinutesInOneMeterPerSecond, meterpersecond.KilometersPerMinutes, KilometersPerMinutesTolerance);
             Assert.AreEqual(KilometersPerSecondInOneMeterPerSecond, meterpersecond.KilometersPerSecond, KilometersPerSecondTolerance);
@@ -128,6 +131,7 @@ namespace UnitsNet.Tests
             Assert.AreEqual(1, Speed.From(1, SpeedUnit.DecimeterPerMinute).DecimetersPerMinutes, DecimetersPerMinutesTolerance);
             Assert.AreEqual(1, Speed.From(1, SpeedUnit.DecimeterPerSecond).DecimetersPerSecond, DecimetersPerSecondTolerance);
             Assert.AreEqual(1, Speed.From(1, SpeedUnit.FootPerSecond).FeetPerSecond, FeetPerSecondTolerance);
+            Assert.AreEqual(1, Speed.From(1, SpeedUnit.InchPerYear).InchesPerYear, InchesPerYearTolerance);
             Assert.AreEqual(1, Speed.From(1, SpeedUnit.KilometerPerHour).KilometersPerHour, KilometersPerHourTolerance);
             Assert.AreEqual(1, Speed.From(1, SpeedUnit.KilometerPerMinute).KilometersPerMinutes, KilometersPerMinutesTolerance);
             Assert.AreEqual(1, Speed.From(1, SpeedUnit.KilometerPerSecond).KilometersPerSecond, KilometersPerSecondTolerance);
@@ -153,6 +157,7 @@ namespace UnitsNet.Tests
             Assert.AreEqual(DecimetersPerMinutesInOneMeterPerSecond, meterpersecond.As(SpeedUnit.DecimeterPerMinute), DecimetersPerMinutesTolerance);
             Assert.AreEqual(DecimetersPerSecondInOneMeterPerSecond, meterpersecond.As(SpeedUnit.DecimeterPerSecond), DecimetersPerSecondTolerance);
             Assert.AreEqual(FeetPerSecondInOneMeterPerSecond, meterpersecond.As(SpeedUnit.FootPerSecond), FeetPerSecondTolerance);
+            Assert.AreEqual(InchesPerYearInOneMeterPerSecond, meterpersecond.As(SpeedUnit.InchPerYear), InchesPerYearTolerance);
             Assert.AreEqual(KilometersPerHourInOneMeterPerSecond, meterpersecond.As(SpeedUnit.KilometerPerHour), KilometersPerHourTolerance);
             Assert.AreEqual(KilometersPerMinutesInOneMeterPerSecond, meterpersecond.As(SpeedUnit.KilometerPerMinute), KilometersPerMinutesTolerance);
             Assert.AreEqual(KilometersPerSecondInOneMeterPerSecond, meterpersecond.As(SpeedUnit.KilometerPerSecond), KilometersPerSecondTolerance);
@@ -178,6 +183,7 @@ namespace UnitsNet.Tests
             Assert.AreEqual(1, Speed.FromDecimetersPerMinutes(meterpersecond.DecimetersPerMinutes).MetersPerSecond, DecimetersPerMinutesTolerance);
             Assert.AreEqual(1, Speed.FromDecimetersPerSecond(meterpersecond.DecimetersPerSecond).MetersPerSecond, DecimetersPerSecondTolerance);
             Assert.AreEqual(1, Speed.FromFeetPerSecond(meterpersecond.FeetPerSecond).MetersPerSecond, FeetPerSecondTolerance);
+            Assert.AreEqual(1, Speed.FromInchesPerYear(meterpersecond.InchesPerYear).MetersPerSecond, InchesPerYearTolerance);
             Assert.AreEqual(1, Speed.FromKilometersPerHour(meterpersecond.KilometersPerHour).MetersPerSecond, KilometersPerHourTolerance);
             Assert.AreEqual(1, Speed.FromKilometersPerMinutes(meterpersecond.KilometersPerMinutes).MetersPerSecond, KilometersPerMinutesTolerance);
             Assert.AreEqual(1, Speed.FromKilometersPerSecond(meterpersecond.KilometersPerSecond).MetersPerSecond, KilometersPerSecondTolerance);

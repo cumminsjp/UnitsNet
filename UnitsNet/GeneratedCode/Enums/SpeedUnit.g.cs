@@ -47,6 +47,7 @@ namespace UnitsNet.Units
         DecimeterPerMinute,
         DecimeterPerSecond,
         FootPerSecond,
+        InchPerYear,
         KilometerPerHour,
         KilometerPerMinute,
         KilometerPerSecond,

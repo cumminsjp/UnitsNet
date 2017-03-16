@@ -64,6 +64,8 @@ namespace UnitsNet.Tests.CustomCode
 
         protected override double KilometersPerMinutesInOneMeterPerSecond => 0.06;
 
+        protected override double InchesPerYearInOneMeterPerSecond => 1242399685.03937;
+
         [Test]
         public void DurationSpeedTimesEqualsLength()
         {

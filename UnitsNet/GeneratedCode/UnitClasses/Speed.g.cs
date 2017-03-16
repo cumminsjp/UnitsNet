@@ -151,6 +151,14 @@ namespace UnitsNet
         }
 
         /// <summary>
+        ///     Get Speed in InchesPerYear.
+        /// </summary>
+        public double InchesPerYear
+        {
+            get { return _metersPerSecond/8.0489395807301034E-10; }
+        }
+
+        /// <summary>
         ///     Get Speed in KilometersPerHour.
         /// </summary>
         public double KilometersPerHour
@@ -309,6 +317,14 @@ namespace UnitsNet
         public static Speed FromFeetPerSecond(double feetpersecond)
         {
             return new Speed(feetpersecond*0.3048);
+        }
+
+        /// <summary>
+        ///     Get Speed from InchesPerYear.
+        /// </summary>
+        public static Speed FromInchesPerYear(double inchesperyear)
+        {
+            return new Speed(inchesperyear*8.0489395807301034E-10);
         }
 
         /// <summary>
@@ -492,6 +508,21 @@ namespace UnitsNet
             if (feetpersecond.HasValue)
             {
                 return FromFeetPerSecond(feetpersecond.Value);
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        ///     Get nullable Speed from nullable InchesPerYear.
+        /// </summary>
+        public static Speed? FromInchesPerYear(double? inchesperyear)
+        {
+            if (inchesperyear.HasValue)
+            {
+                return FromInchesPerYear(inchesperyear.Value);
             }
             else
             {
@@ -731,6 +762,8 @@ namespace UnitsNet
                     return FromDecimetersPerSecond(val);
                 case SpeedUnit.FootPerSecond:
                     return FromFeetPerSecond(val);
+                case SpeedUnit.InchPerYear:
+                    return FromInchesPerYear(val);
                 case SpeedUnit.KilometerPerHour:
                     return FromKilometersPerHour(val);
                 case SpeedUnit.KilometerPerMinute:
@@ -790,6 +823,8 @@ namespace UnitsNet
                     return FromDecimetersPerSecond(value.Value);
                 case SpeedUnit.FootPerSecond:
                     return FromFeetPerSecond(value.Value);
+                case SpeedUnit.InchPerYear:
+                    return FromInchesPerYear(value.Value);
                 case SpeedUnit.KilometerPerHour:
                     return FromKilometersPerHour(value.Value);
                 case SpeedUnit.KilometerPerMinute:
@@ -982,6 +1017,8 @@ namespace UnitsNet
                     return DecimetersPerSecond;
                 case SpeedUnit.FootPerSecond:
                     return FeetPerSecond;
+                case SpeedUnit.InchPerYear:
+                    return InchesPerYear;
                 case SpeedUnit.KilometerPerHour:
                     return KilometersPerHour;
                 case SpeedUnit.KilometerPerMinute:
